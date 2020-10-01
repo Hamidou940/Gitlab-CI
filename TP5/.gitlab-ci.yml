@@ -1,0 +1,31 @@
+stages:
+  - demoshell
+  - democontainer
+
+hello1:
+  stage: demoshell
+  tags:
+    - toto
+  script:
+    - echo "Hello job1 !"
+    - exit 3
+
+hello2:
+  stage: demoshell
+  tags:
+    - toto
+  script:
+    - echo "Hello job2 !"
+
+helloformdocker:
+  stage: democontainer
+  image: bash
+  tags:
+    - container
+  script:
+    - echo "Hello from Docker !"
+  only:
+    - master
+  dependencies:
+    - hello1
+    - hello2
