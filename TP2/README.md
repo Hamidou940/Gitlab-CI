@@ -22,7 +22,7 @@
 
 * `cd projet_TP1` : On se rend dans le projet
 * `git status` : On vérifie que rien ne reste à commit. Sinon on commit comme vu dans le TP1.
-* `git add origin <SSH URL de votre dépot>` : On ajoute le remote du projet créé.
+* `git remote add origin <SSH URL de votre dépot>` : On ajoute le remote du projet créé.
 * `git push -u origin dev` : On pousse le code commit localement vers le repos distant
 
 ## Créer une Merge Request
