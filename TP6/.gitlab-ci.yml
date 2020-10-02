@@ -1,0 +1,48 @@
+stages:
+  - QA
+  - Documentation
+  - Delivery
+
+shellexectest:
+  stage: QA
+  tags:
+    - shell
+  script:
+    - files=`git diff-tree --no-commit-id --name-only -r $CI_COMMIT_SHA scripts/`
+    - for i in $files; do echo $i; done
+    - for i in $files; do bash $i; done
+
+Readme:
+  stage: Documentation
+  tags:
+    - shell
+  script:
+    - files=`git diff-tree --no-commit-id --name-only -r $CI_COMMIT_SHA scripts/`
+      #   - for i in $files; grep $i README.md; done
+
+Archive:
+  stage: Delivery
+  tags:
+    - shell
+  script:
+    - tar -cvf archive.tar scripts/
+  only:
+    - master
+  artifacts:
+   name: "$CI_JOB_NAME-$CI_COMMIT_REF_NAME"
+   paths:
+    - archive.tar
+   expire_in: 1 week
+
+
+
+
+
+
+
+
+
+
+
+
+
