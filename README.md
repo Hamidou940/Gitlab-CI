@@ -59,16 +59,21 @@
 * Redémarrer tout le GitLab (avec systemd ou gitlab-ctl)
 * Exécutez 2 appels APIs
 
-[LIEN CORRECTION]()
+[LIEN CORRECTION](./TP5-administration-gitlab/README.md)
 
-## TP_Docker
+## TP6 : Docker
 
 * Installer Docker
 * Créer un conteneur
 * Créer un Dockerfile
 * Lister les images locals
+* Activer le Registry Docker dans Gitlab
+* Push votre dockerfile
+* Push votre image Docker dans le registry
 
-## TP5
+[LIEN CORRECTION](./TP_Docker/README.md)
+
+## TP7 : Ma première pipeline
 
 * Installer un runner “shell”
 * Donner un tag “cli” au runner
@@ -81,3 +86,17 @@
 	* Un troisième job qui est dépendant des deux premiers et qui s'exécute uniquement sur Master
 	* echo “Mon job final !”
 
+[LIEN CORRECTION](./TP7-premiere-pipeline/.gitlab-ci.yml)
+
+## TP8 : Ma première chaine de continus delivery !
+
+* Créer un projet “dockerApp”
+* Créer une chaîne CD qui va :
+	* Faire des tests unitaires avec “phpunit” 
+	* Construire l’image Docker
+	* La tag avec l’ID du commit (variables CI Gitlab: $CI_COMMIT_SHA)
+	* Push l’image dans le registry Gitlab
+	* Déployer l’image sur une machine virtuelle (uniquement sur master)
+	* Faire un job optionnel qui va afficher un message en broadcast sur l’instance Gitlab (utilisez les variables protégée)
+
+[LIEN CORRECTION](./TP7-premiere-pipeline/.gitlab-ci.yml)
