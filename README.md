@@ -88,7 +88,7 @@
 
 [LIEN CORRECTION](./TP7-premiere-pipeline/.gitlab-ci.yml)
 
-## TP8 : Ma première chaine de continus delivery !
+## Examen : Ma première chaine de continus delivery !
 
 * Créer un projet “dockerApp”
 * Créer une chaîne CD qui va :
@@ -99,4 +99,4 @@
 	* Déployer l’image sur une machine virtuelle (uniquement sur master)
 	* Faire un job optionnel qui va afficher un message en broadcast sur l’instance Gitlab (utilisez les variables protégée)
 
-[LIEN CORRECTION](./TP8-premiere-chaine-cd-cd/)
+[LIEN CORRECTION](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
