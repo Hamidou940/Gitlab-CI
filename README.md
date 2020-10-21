@@ -16,7 +16,7 @@
 
 [LIEN CORRECTION](./TP1-decouverte-git/README.md)
 
-## TP 2 : Les pré-commits 
+## TP2 : Les pré-commits 
 
 * Installer python & pip
 * Installer pre-commit
