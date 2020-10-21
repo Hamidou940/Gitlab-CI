@@ -1,6 +1,6 @@
 # Correction TPs 
 
-## TP1 
+## TP1 : Découverte de Git
 
 * Installation de git
 * Création d’un projet git
@@ -14,7 +14,20 @@
 * Les annuler sans garder celle-ci
 * Pour les plus rapides merge dev à master (git merge)
 
-## TP2
+[LIEN CORRECTION](./TP1-decouverte-git/README.md)
+
+## TP 2 : Les pré-commits 
+
+* Installer python & pip
+* Installer pre-commit
+* Dans le précédent dépôt créer un précommit
+* Ajouter un check des secrets 
+* Tester sans secret
+* Ajouter un secret et essayer de le commit
+
+[LIEN CORRECTION](./TP2-pre-commit/README.md)
+
+## TP3 : Découverte de Gitlab.com
 
 * Création d’un compte sur gitlab.com
 * Configuration du compte (clé SSH : ssh-keygen -t ed25519)
@@ -25,14 +38,18 @@
 * Afficher l’historique des commits (GUI + CLI)
 * Accepter la MR sur gitlab.com
 
-## TP3 
+[LIEN CORRECTION](./TP3-decouverte-gitlab-com/README.md)
 
-* Créer une machine virtuel (2 CPUs / 4Go RAM min) 
+## TP4 : Installation de Gitlab CE (Omnibus) 
+
+* Créer une machine virtuel (2 CPUs / 4Go RAM / 15Go Disque min) 
 * Installer GitLab CE
 * Démarrer GitLab CE
 * Créer le compte Admin
 
-## TP4
+[LIEN CORRECTION](./TP4-installation-gitlab/README.md)
+
+## TP5 : Administration de Gitlab
 
 * Ajouter un message général pour avertir d’un maintenance
 * Créer 2 utilisateurs (un admin, un standard)
@@ -41,6 +58,8 @@
 * Vérifiez le status (EN CLI)
 * Redémarrer tout le GitLab (avec systemd ou gitlab-ctl)
 * Exécutez 2 appels APIs
+
+[LIEN CORRECTION]()
 
 ## TP_Docker
 
