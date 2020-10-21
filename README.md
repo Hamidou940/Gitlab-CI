@@ -99,4 +99,4 @@
 	* Déployer l’image sur une machine virtuelle (uniquement sur master)
 	* Faire un job optionnel qui va afficher un message en broadcast sur l’instance Gitlab (utilisez les variables protégée)
 
-[LIEN CORRECTION](./TP7-premiere-pipeline/.gitlab-ci.yml)
+[LIEN CORRECTION](./TP8-premiere-chaine-cd-cd/)
