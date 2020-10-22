@@ -8,7 +8,7 @@ hello1:
     - toto
   script:
     - echo "Hello job1 !"
-    - exit 3
+#    - exit 3 #exemple d'erreur pour tester 
 
 hello2:
   stage: demoshell
