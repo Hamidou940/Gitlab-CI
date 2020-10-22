@@ -86,7 +86,7 @@
 	* Un troisième job qui est dépendant des deux premiers et qui s'exécute uniquement sur Master
 	* echo “Mon job final !”
 
-[LIEN CORRECTION](./TP7-premiere-pipeline/.gitlab-ci.yml)
+[LIEN CORRECTION](./README.md)
 
 ## Examen : Ma première chaine de continus delivery !
 
