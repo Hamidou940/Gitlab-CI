@@ -1,48 +1,37 @@
+# On définit les stages
 stages:
-  - QA
-  - Documentation
-  - Delivery
+  - tests
+  - build
+  - livraison
 
-shellexectest:
-  stage: QA
+# On définit une variable IMAGE_TAG qui va être composé de l'adresse de votre registry + la référence du commit.
+variables:
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+
+# Votre premier job qui va juste executer la commande test sur le fichier dans un conteneur "bash"
+test-index:
+  stage: tests
   tags:
-    - shell
+    - container
+  image: bash
   script:
-    - files=`git diff-tree --no-commit-id --name-only -r $CI_COMMIT_SHA scripts/`
-    - for i in $files; do echo $i; done
-    - for i in $files; do bash $i; done
+    - test -s index.html
 
-Readme:
-  stage: Documentation
+# On se log au registry, on build, avant de push l'image Docker
+build-push:
+  stage: build
   tags:
-    - shell
+    - cli
   script:
-    - files=`git diff-tree --no-commit-id --name-only -r $CI_COMMIT_SHA scripts/`
-      #   - for i in $files; grep $i README.md; done
+    - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker build -t $IMAGE_TAG .
+    - docker push $IMAGE_TAG
 
-Archive:
-  stage: Delivery
+# On execute sur le runner prod un run du conteneur après s'être log sur le registry Docker
+deploy:
+  stage: livraison
   tags:
-    - shell
+    - prod
   script:
-    - tar -cvf archive.tar scripts/
-  only:
-    - master
-  artifacts:
-   name: "$CI_JOB_NAME-$CI_COMMIT_REF_NAME"
-   paths:
-    - archive.tar
-   expire_in: 1 week
-
-
-
-
-
-
-
-
-
-
-
-
-
+    - docker login -u $CI_REGISTRY_USER -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker run -d -p 99:80 $IMAGE_TAG 

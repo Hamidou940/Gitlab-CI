@@ -88,6 +88,17 @@
 
 [LIEN CORRECTION](./README.md)
 
+## TP8 : Ma première chaîne CD !
+
+* Récupérer le projet TP8 sur un nouveau projet
+	* https://gitlab.com/thger_formation/tp8
+* Créer une chaîne CD qui va :
+	* Vérifier la présence du fichier index.html (test -s $FILE) en utilisant un executor Docker
+	* Build l’image Docker & push l’image Docker avec un executor Shell
+	* Déployer uniquement sur master la nouvelle image sur un runner particulier tag : production
+
+[LIEN CORRECTION](./TP8-premiere-chaine-cd-cd/README.md)
+
 ## Examen : Ma première chaine de continus delivery !
 
 * Créer un projet “dockerApp”
