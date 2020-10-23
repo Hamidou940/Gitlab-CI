@@ -101,13 +101,4 @@
 
 ## Examen : Ma première chaine de continus delivery !
 
-* Créer un projet “dockerApp”
-* Créer une chaîne CD qui va :
-	* Faire des tests unitaires avec “phpunit” 
-	* Construire l’image Docker
-	* La tag avec l’ID du commit (variables CI Gitlab: $CI_COMMIT_SHA)
-	* Push l’image dans le registry Gitlab
-	* Déployer l’image sur une machine virtuelle (uniquement sur master)
-	* Faire un job optionnel qui va afficher un message en broadcast sur l’instance Gitlab (utilisez les variables protégée)
-
 [LIEN CORRECTION](https://www.youtube.com/watch?v=dQw4w9WgXcQ)
