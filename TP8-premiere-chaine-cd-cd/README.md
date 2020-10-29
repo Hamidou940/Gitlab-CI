@@ -20,3 +20,8 @@ Afin de garantir la sécurité de notre pipeline :
 
 * Nous créons un token de service sur le projet afin de ne pas utiliser notre compte Gitlab personnel pour l'upload des images dans le registry. Pour cela allez dans Project > Settings > CICD > repository > Deploy Tokens, donner un nom qui servira à la connexion au registry cocher `read_package_registry` et `write_package_registry` et copiez le token.
 * Nous allons ensuite entrer ces tokens dans des variables protégées. Pour cela allez dans Project > Settings > CICD > Variables, faite ajouter en `key` mettez le nom de la variable que vous avez mis pour le compte dans votre `.gitlab-ci.yml` (ici CI_REGISTRY_USER) et mettez le nom donné en token, décocher la case `Protect variable` et cochez `Mask variable`. Répétez ensuite cette opération pour le token en lui-même en adaptant la partie variable d'environement.
+
+## En cas d'erreur sur les jobs en executor Shell
+
+* Rendez-vous dans le répertoire de l'utilisateur gitlab-runner `/home/gitlab-runner`, c'est l'utilisateur qui est utilisé par le runner pour executer les commandes
+* Effectuer la commande `rm -rf .*`, qui permettera de supprimer tous les fichiers de configuration de l'environement qui pourrai entrer en conflict avec le fonctionnement en mode shell
