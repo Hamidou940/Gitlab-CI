@@ -12,6 +12,8 @@ Il est possible de réaliser ce TP dans sur [Gitlab.com](https://gitlab.com) à 
 
 ## Créer une chaîne CD
 
+Il faudra que votre runner `shell` ai le droit d'utiliser Docker, pour cela il faut ajouté l'utilisateur du runner (gitlab-runner) au groupe docker : `usermod -aG docker gitlab-runner`
+
 Voir la configuration pour le reste de la pipeline :
 
 [Voir config](./.gitlab-ci.yml)
