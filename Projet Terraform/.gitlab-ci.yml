@@ -1,0 +1,38 @@
+stages:
+    - test
+    - deploy
+    - destroy
+
+Terra_test:
+    image:
+        name: hashicorp/terraform:light
+        entrypoint: [""]
+    stage: test
+    tags:
+        - test
+    script:
+        - terraform init .
+        - terraform validate .
+
+Terra_deploy:
+    image:
+        name: hashicorp/terraform:light
+        entrypoint: [""]
+    stage: deploy
+    tags:
+        - apply
+    script:
+        - terraform init -var="group_id=s1" .
+        - terraform apply -var="group_id=s1" -auto-approve .
+
+Terra_destroy:
+        stage: destroy
+        image:
+                name: hashicorp/terraform:light
+                entrypoint: [""]
+        tags: 
+                - destroy
+        script:
+                - terraform init .
+                - terraform destroy -var="group_id=s1" -auto-approve .
+        
