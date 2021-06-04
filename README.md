@@ -14,7 +14,7 @@
 * Les annuler sans garder celle-ci
 * Pour les plus rapides merge dev à master (git merge)
 
-[LIEN CORRECTION](./TP1-decouverte-git/README.md)
+[LIEN CORRECTION](./TP%20Gitlab-CI/TP1-decouverte-git/README.md)
 
 ## TP2 : Les pré-commits 
 
@@ -25,7 +25,7 @@
 * Tester sans secret
 * Ajouter un secret et essayer de le commit
 
-[LIEN CORRECTION](./TP2-pre-commit/README.md)
+[LIEN CORRECTION](./TP%20Gitlab-CI/TP2-pre-commit/README.md)
 
 ## TP3 : Découverte de Gitlab.com
 
@@ -38,7 +38,7 @@
 * Afficher l’historique des commits (GUI + CLI)
 * Accepter la MR sur gitlab.com
 
-[LIEN CORRECTION](./TP3-decouverte-gitlab-com/README.md)
+[LIEN CORRECTION](./TP%20Gitlab-CI/TP3-decouverte-gitlab-com/README.md)
 
 ## TP4 : Installation de Gitlab CE (Omnibus) 
 
@@ -47,7 +47,7 @@
 * Démarrer GitLab CE
 * Créer le compte Admin
 
-[LIEN CORRECTION](./TP4-installation-gitlab/README.md)
+[LIEN CORRECTION](./TP%20Gitlab-CI/TP4-installation-gitlab/README.md)
 
 ## TP5 : Administration de Gitlab
 
@@ -59,7 +59,7 @@
 * Redémarrer tout le GitLab (avec systemd ou gitlab-ctl)
 * Exécutez 2 appels APIs
 
-[LIEN CORRECTION](./TP5-administration-gitlab/README.md)
+[LIEN CORRECTION](./TP%20Gitlab-CI/TP5-administration-gitlab/README.md)
 
 ## TP6 : Docker
 
@@ -71,7 +71,7 @@
 * Push votre dockerfile
 * Push votre image Docker dans le registry
 
-[LIEN CORRECTION](./TP_Docker/README.md)
+[LIEN CORRECTION](./TP%20Gitlab-CI/TP_Docker/README.md)
 
 ## TP7 : Ma première pipeline
 
@@ -86,7 +86,7 @@
 	* Un troisième job qui est dépendant des deux premiers et qui s'exécute uniquement sur Master
 	* echo “Mon job final !”
 
-[LIEN CORRECTION](./README.md)
+[LIEN CORRECTION](./TP%20Gitlab-CI/README.md)
 
 ## TP8 : Ma première chaîne CD !
 
@@ -97,7 +97,7 @@
 	* Build l’image Docker & push l’image Docker avec un executor Shell
 	* Déployer uniquement sur master la nouvelle image sur un runner particulier tag : production
 
-[LIEN CORRECTION](./TP8-premiere-chaine-cd-cd/README.md)
+[LIEN CORRECTION](./TP%20Gitlab-CI/TP8-premiere-chaine-cd-cd/README.md)
 
 ## Examen : Ma première chaine de continus delivery !
 
